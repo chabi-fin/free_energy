@@ -10,8 +10,8 @@ TDIR=/scratch/finnl92/tmp/$CALCDIR
 cp -r * $TDIR
 cd $TDIR
 
-lambda=$1
-gmxs mdrun -deffnm md_$lambda -nt 16 -pin on -nobackup
+#JOB INPUT GOES HERE
+$@
 
 # Move job to home directory
 cp -r $TDIR/* $FULLPATH
